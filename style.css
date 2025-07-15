@@ -269,3 +269,26 @@ html {
 .inline-contact a:hover {
   text-decoration: underline;
 }
+.experience-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.experience-box h3 {
+  margin-bottom: 0.5rem;
+  color: #00dbde;
+}
+
+.experience-box p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
