@@ -298,10 +298,11 @@ html {
   border: 1px solid rgba(255,255,255,0.2);
 }
 
-.inline-contact {
-  margin-top: 1rem;
-  text-align: left;
+.inline-contact i {
+  margin-right: 0.5rem;
+  color: #00dbde;
 }
+
 
 .inline-contact p {
   margin: 0.3rem 0;
@@ -440,3 +441,5 @@ nav a:active {
   outline: none;
   background: none;
 }
+
+
