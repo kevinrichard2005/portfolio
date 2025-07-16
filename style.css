@@ -53,9 +53,7 @@ nav a {
   font-weight: 500;
 }
 
-nav a:hover {
-  color: #00dbde;
-}
+
 
 .hamburger {
   display: none;
@@ -138,28 +136,56 @@ footer {
   nav {
     display: none;
     flex-direction: column;
-    background: var(--primary);
+    background: rgba(15, 32, 39, 0.95);
     position: absolute;
     right: 0;
     top: 60px;
     width: 100%;
     text-align: center;
-  }
-
-  nav a {
-    padding: 1rem;
-    border-top: 1px solid #555;
-    color: var(--bg-color);
+    padding: 1rem 0;
   }
 
   nav.active {
     display: flex;
   }
 
+  nav a {
+    padding: 1rem;
+    border-top: 1px solid #444;
+    color: #ffffff;
+    font-size: 1rem;
+  }
+
   .hamburger {
     display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
   }
 }
+
 .about-container {
   display: flex;
   flex-direction: row;
@@ -394,4 +420,23 @@ nav a {
 footer {
   background: var(--primary);
   color: var(--text-color);
+}
+nav a:focus,
+nav a:active {
+  outline: none;
+  color: inherit;
+  background: none;
+}
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:focus,
+nav a:active {
+  color: #ffffff;   /* turns white on click/tap */
+  outline: none;
+  background: none;
 }

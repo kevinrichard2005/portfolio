@@ -39,3 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
     interval: 200
   });
 });
+// Auto-close nav on link click (mobile)
+document.querySelectorAll('#nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('nav-links').classList.remove('active');
+  });
+});
