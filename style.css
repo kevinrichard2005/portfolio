@@ -1,33 +1,32 @@
-root {
+:root {
   --bg-color: #f4f4f4;
-  --text-color: #333;
-  --card-bg: #fff;
-  --primary: #333;
+  --text-color: #1a1a1a;
+  --card-bg: #ffffff;
+  --primary: #111827;
+  --link-color: #00dbde;
+  --btn-bg: #00dbde;
+  --btn-text: #000;
+  --border-color: #ccc;
 }
-
 body.dark {
   --bg-color: #121212;
-  --text-color: #f0f0f0;
-  --card-bg: #1e1e1e;
-  --primary: #fff;
+  --text-color: #f5f5f5;
+  --card-bg: #1e1e2f;
+  --primary: #0f172a;
 }
 
 body {
   background: var(--bg-color);
   color: var(--text-color);
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
   transition: all 0.3s ease-in-out;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 header {
-  background: var(--primary);
-  color: var(--bg-color);
+  background: rgba(15, 32, 39, 0.95); /* suits your dark background */
+  color: #f5f5f5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,6 +34,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -42,14 +42,19 @@ header {
   font-weight: bold;
 }
 
+
 nav {
   display: flex;
   gap: 1rem;
 }
-
 nav a {
-  color: var(--bg-color);
+  color: #ffffff;
   text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #00dbde;
 }
 
 .hamburger {
@@ -57,8 +62,9 @@ nav a {
   font-size: 2rem;
   background: none;
   border: none;
-  color: var(--bg-color);
+  color: #ffffff;
 }
+
 
 .theme-toggle {
   font-size: 1.5rem;
@@ -72,14 +78,23 @@ nav a {
 }
 
 .btn {
-  background: var(--primary);
-  color: var(--bg-color);
+  background: #00dbde;
+  color: #000;
   padding: 0.6rem 1.2rem;
   text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 219, 222, 0.3);
+  transition: all 0.3s ease;
 }
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #00bfd6;
+}
+
+
+
 
 .skills span {
   display: inline-block;
@@ -205,13 +220,19 @@ body {
   padding: 4rem 2rem;
 }
 
-.about-container, .cert-list, .skills {
-  background: rgba(255, 255, 255, 0.05);
+.about-container,
+.cert-list,
+.skills,
+.experience-box {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 2rem;
   margin-top: 2rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
+
 .profile-pic {
   width: 280px;
   height: 280px;
@@ -291,4 +312,86 @@ html {
   margin: 0.3rem 0;
   font-size: 1rem;
   line-height: 1.6;
+}
+/* From Uiverse.io by adamgiebl */ 
+button {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+footer {
+  background: var(--primary);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1rem;
+}
+header {
+  background: var(--primary);
+  color: var(--text-color);
+}
+
+nav a {
+  color: var(--text-color);
+}
+
+.section,
+.about-container,
+.skills,
+.cert-list,
+.experience-box {
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+
+footer {
+  background: var(--primary);
+  color: var(--text-color);
 }
