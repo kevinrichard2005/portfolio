@@ -1,13 +1,14 @@
 :root {
-  --bg-color: #f4f4f4;
-  --text-color: #1a1a1a;
-  --card-bg: #ffffff;
-  --primary: #111827;
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --card-bg: #1e1e2f;
+  --primary: #0f172a;
   --link-color: #00dbde;
   --btn-bg: #00dbde;
   --btn-text: #000;
-  --border-color: #ccc;
+  --border-color: #333;
 }
+
 body.dark {
   --bg-color: #121212;
   --text-color: #f5f5f5;
@@ -16,13 +17,13 @@ body.dark {
 }
 
 body {
-  background: var(--bg-color);
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: var(--text-color);
   font-family: 'Outfit', sans-serif;
   margin: 0;
   padding: 0;
-  transition: all 0.3s ease-in-out;
 }
+
 
 header {
   background: rgba(15, 32, 39, 0.95); /* suits your dark background */
@@ -74,7 +75,6 @@ nav a {
   padding: 4rem 2rem;
   text-align: center;
 }
-
 .btn {
   background: #00dbde;
   color: #000;
@@ -472,4 +472,41 @@ nav a:active {
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+}
+
+
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skill-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  color: var(--text-color);
+}
+
+.skill-item i {
+  font-size: 1.5rem;
+  color: #00dbde;
+  margin-right: 0.5rem;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+#about {
+  margin-bottom: 0;
 }
